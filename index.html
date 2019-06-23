@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<title>Jeney Neo&mdash; Welcome to my blog！</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--***************-->
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/popper.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+
+		<script src="js/vendor/jquery.easing.1.3.js"></script>
+		<script src="js/vendor/jquery.stellar.min.js"></script>
+		<script src="js/vendor/jquery.waypoints.min.js"></script>
+
+		<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+		<script src="js/custom.js"></script>
+		<!--***************-->
+
+		<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/flexslider.css">
+		<link rel="stylesheet" href="fonts/icomoon/style.css">
+
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--小学图片记忆CSS-->
+		<link rel="stylesheet" href="css/02PrimeryPicture.css" />
+
+		<!--添加Leaflet地图-->
+		<link rel="stylesheet" href="css/Leaflet/leaflet.css" />
+		<script type="text/javascript" src="js/Leaflet/leaflet.js"></script>
+		<script type="text/javascript" src="js/Leaflet/leaflet.ChineseTmsProviders.js"></script>
+
+		<!--添加高德地图-->
+		<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=d8662523cb01200a135de5306db5410e&plugin=AMap.Driving"></script>
+		<!--<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=d8662523cb01200a135de5306db5410e"></script>-->
+
+		<!--添加百度地图API-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=KPvkjD4b2HpncnEcp8qnmLqEU2gunKfB"></script>
+
+		<!--添加自定义文件-->
+		<link rel="stylesheet" href="css/Leaflet/AddMap.css" />
+		<script type="text/javascript" src="js/Leaflet/AddMap.js"></script>
+	</head>
+
+	<body data-spy="scroll" data-target="#pb-navbar" data-offset="200" onload="Map()">
+
+		<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+
+			<div class="container">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+				<a class="navbar-brand" href="index.html">jeney Neo</a>
+				<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09" style="z-index: 999;">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#section-home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section-about">Childhood</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section-services">Primary School</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section-features">Middle School</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section-resume">High School</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section-blog">College</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section class="site-hero" style="background-image: url(images/image_1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row intro-text align-items-center justify-content-center">
+					<div class="col-md-10 text-center">
+						<h1 class="site-heading site-animate">Hello, I'm <strong>Jeney Neo</strong></h1>
+						<p class="lead site-subheading mb-4 site-animate">A junior student of HUBU majoring in Geographic Information Science. Welcome to my secret BLOG ！Here ，I wanna share my Growing Story with you : )</p>
+						<p>
+							<a href="#section-about" class="smoothscroll btn btn-primary px-4 py-3">More On Me</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- section -->
+
+		<section class="site-section" id="section-about">
+			<div class="container">
+				<div class="row mb-5 align-items-center">
+					<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+						<img src="images/茶园01.jpg" alt="Image placeholder" class="img-fluid">
+					</div>
+					<div class="col-lg-5">
+						<div class="section-heading">
+							<h2>About <strong>Childhood</strong></h2>
+						</div>
+						<p>
+							I was born in Quanfuhe Village, Yuguan Town, Wufeng Tujia Autonomous County, a place with tea civilization.As my parents needed to work at a fixed time and had no time to take care of me, I grew up with my grandparents before I went to school.</br>
+							My grandparents are farmers with very low educational background, but they still taught me a lot in my ignorant age with practical actions. They taught me to love work,to work diligently, to fear hardship and not to fear fatigue, and to cherish food, whether poor or rich.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="Addmap01">
+			<div id="map01"></div>
+		</section>
+
+		<section class="site-section border-top pb-0" id="section-services">
+			<div class="row mb-4">
+				<div class="col-md-12">
+					<div class="section-heading text-center">
+						<h2><strong>Primary </strong>School</h2>
+					</div>
+				</div>
+			</div>
+
+			<div id="Addmap02" style="height: 750px;">
+
+				<div class="row">
+
+					<div class="col-md-6 col-lg-4 text-center mb-5" style="z-index: 500; background-color: white;margin-top: 50px; margin-left: 50px; height: 650px;">
+						<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+							</br>
+							<h3 class="mb-4">Start to School</h3>
+							<p>In 2013, when I was five years old, it was time for starting to school. I came to Moshi , 60KM away from where i was born, a small town where my parents worked. This is my second home, the warm harbour when I am tired. I am now studying outside. When I think of it, there will be a warm place in my heart.</p>
+							<img src="images/油菜田.jpg">
+							<p>
+								My primary school is Liujiayuan Primary School, two kilometers from my home. In the first two years of school, my father used his motorcycle to pick up and deliver school every morning and evening. However, as I grow older, I prefer to walk to school on my own, and I prefer to meet my classmates on the way to school with a sense of laughter, jollification and liveliness. I like to see the quiet mountains in the morning, and I like to run in the evening near the stalks of large rape fields.
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+		<section class="site-section" id="section-features">
+			<div>
+				<div class="row" id="MiddleSchoolRaw">
+					<div class="col-md-7">
+						<h5>Old Memories</h5>
+						<div class="PictureView">
+							<img src="images/PrimerySchool/001小学刘冰洁02.jpg" alt="">
+							<div class="hover">
+								<h5 style="color: white;">Childrens Day</h5>
+								<p>ShowTime</p>
+							</div>
+						</div>
+						<div class="PictureView">
+							<img src="images/PrimerySchool/002小学会议室01.jpg" alt="">
+							<div class="hover">
+								<h5 style="color: white;">Meetting</h5>
+								<p>Our Teachers</p>
+							</div>
+						</div>
+						<div class="PictureView">
+							<img src="images/PrimerySchool/03小学老师_覃萍.jpg" alt="">
+							<div class="hover">
+								<h5 style="color: white;">Principal</h5>
+								<p>Math teacher</p>
+							</div>
+						</div>
+						<div class="PictureView">
+							<img src="images/PrimerySchool/03小学老师_覃远桃.jpg" alt="">
+							<div class="hover">
+								<h5 style="color: white;">Chinese Teacher</h5>
+								<p>Chinese teacher</p>
+							</div>
+						</div>
+						<div class="PictureView">
+							<img src="images/PrimerySchool/小学同学_杨姗姗.jpg" alt="">
+							<div class="hover">
+								<h5 style="color: white;">Schoolmate</h5>
+								<p>ShanShan</p>
+							</div>
+						</div>
+						<div class="PictureView">
+							<img src="images/PrimerySchool/小学姐姐_刘楚杰.jpg" alt="">
+							<div class="hover">
+								<h5 style="color: white;">Schoolmate</h5>
+								<p>ShanShan</p>
+							</div>
+						</div>
+						<div class="PictureView">
+							<img src="images/PrimerySchool/小学后花园.jpg" alt="">
+							<div class="hover">
+								<h5 style="color: white;">Back Garden </h5>
+								<p>Having fun</p>
+							</div>
+						</div>
+						<div class="PictureView">
+							<img src="images/PrimerySchool/小学林荫道.jpg" alt="">
+							<div class="hover">
+								<h5 style="color: white;">Shade Place </h5>
+								<p>Plants</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<h3 class="mb-3"><strong>Middle </strong>school</h3>
+						<p>My Middle school is close to my home than primary school, only about 500 meters. Because of the high school entrance examination, junior high school life is relatively more compact.</p>
+
+						<div id="Addmap03" style="width: 550px;height: 350px;">
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- .section -->
+
+		<section class="site-section bg-light " id="section-resume">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+
+					</div>
+					<div class="col-md-6" style="z-index: 800; background-color: white; padding: 20px;">
+						<div class="section-heading text-center">
+							<h2><strong>High </strong>School</h2>
+						</div>
+						<div class="resume-item mb-4">
+							<p>Like most high school students, my high school life is mostly a three-point line. One of the most exciting things I have ever done in my plain high school life is to shave a flat head. Maybe this is something I will never have the courage to challenge in the future.</p>
+							<center><img src="images/HighSchool.jpg"></center>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- .section -->
+
+		<section class="site-section" id="section-blog">
+			<div class="row">
+				<div class="col-md-12 mb-5" style="margin-top: 20px;">
+					<div class="section-heading text-center">
+						<h2><strong>College </strong>Life</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="blog-entry">
+							<a href="#"><img src="images/College01.jpg" alt="Image placeholder" class="img-fluid"></a>
+							<div class="blog-entry-text">
+								<h3><a href="#">Start College Life</a></h3>
+								<p class="mb-4">In September 2016, I entered Hubei University and started my college life. In my spare time, I can get out of my dormitory and do regular exercises.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="blog-entry">
+							<a href="#"><img src="images/College02.jpg" alt="Image placeholder" class="img-fluid"></a>
+							<div class="blog-entry-text">
+								<h3><a href="#">Field investigation</a></h3>
+								<p class="mb-4">In the third year of university, our specialty carried out field investigation and practice. I studied in Lushan with my classmates.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="blog-entry">
+							<a href="#"><img src="images/College03.jpg" alt="Image placeholder" class="img-fluid"></a>
+							<div class="blog-entry-text">
+								<h3><a href="#">Habits</a></h3>
+								<p class="mb-4">In my spare time, I can have more time to do what I want to do. In my personal interest, I set a small goal in each period and insist on doing one thing. Every period of perseverance, let me harvest a lot.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section class="site-section bg-light" id="Addmap05_2" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6" id="Addmap05_1" >
+						<p style="height: 400px;"></p>
+					</div>
+					<div class="col-md-6" style="z-index: 800; padding: 20px;">
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</body>
+
+</html>
